@@ -2,8 +2,10 @@ var discord = require('discord.js');
 var client = new discord.Client();
 var Commands = require('./commands.js').Commands;
 var commands = new Commands(client);
-
+var presence = require('./presence.js');
+var presenceTimer = new presence.Timer(client);
 client.on('ready', function () {
+	presenceTimer.startTimer(300000, 600000);
 	console.log('Bot ready! Logged in as "' + client.user.tag + '".');
 });
 
