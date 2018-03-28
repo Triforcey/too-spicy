@@ -4,7 +4,8 @@ exports.Commands = class {
 	}
 	tooSpicy(channel, msgId, req) {
 		channel.fetchMessage(msgId).then((msg) => {
-			if (!msg.attachments.array().length) {
+			var urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+			if (!msg.attachments.array().length && !msg.content.match(urlRegex)) {
 				req.reply('what\'s to de-spice?');
 				return;
 			}
