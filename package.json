@@ -1,0 +1,21 @@
+{
+  "name": "too-spicy",
+  "version": "1.0.0",
+  "description": "For memes that are way too spicy.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon"
+  },
+  "author": "Jay Dee Phlem",
+  "license": "GPL-3.0+",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2"
+  },
+  "nodemonConfig": {
+    "ext": "js"
+  }
+}
