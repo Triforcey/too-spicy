@@ -7,8 +7,8 @@ exports.Timer = class {
 			var users = client.users.array();
 			var presences = [];
 			for (var i = 0; i < users.length; i++) {
-				let game = users[i].presence.game;
-				if (game) presences.push(users[i].presence);
+				let presence = users[i].presence;
+				if (presence.game) presences.push(presence);
 			}
 			var presence = presences[Math.floor(Math.random() * presences.length)];
 			client.user.setPresence(presence);
