@@ -23,5 +23,8 @@ exports.listen = function (client, name) {
 			req.reply('I couldn\'t de-spice that message. Are you sure that ID is right?');
 		});
 	});
+	commands.set('old-spice', req => {
+		req.channel.send('https://youtu.be/Hq2SlCja3zo');
+	});
 	commands.listen();
 }
