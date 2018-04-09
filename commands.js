@@ -14,5 +14,5 @@ exports.Commands = class {
 		}, (err) => {
 			req.reply('I couldn\'t de-spice that message. Are you sure that ID is right?');
 		});
-	};
+	}
 };
