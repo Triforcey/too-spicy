@@ -26,5 +26,8 @@ exports.listen = function (client, name) {
 	commands.set('old-spice', req => {
 		req.channel.send('https://youtu.be/Hq2SlCja3zo');
 	});
+	commands.set('fortnite', req => {
+		req.reply('I can only de-spice, and cannot de-trash.');
+	});
 	commands.listen();
 }
