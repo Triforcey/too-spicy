@@ -5,7 +5,7 @@ exports.listen = function (client, name) {
 		req.channel.send('<@' + req.author.id + '>\n!toospicy de-spice <message-id>\nTo get a message ID, check out this:\nhttps://support.discordapp.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-');
 	});
 	commands.set('de-spice', (req, args) => {
-		if (args.length < 1) {
+		if (!args.length) {
 			req.reply('What message do you wish to de-spice?');
 			return;
 		}

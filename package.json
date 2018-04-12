@@ -10,11 +10,12 @@
   "author": "Jay Dee Phlem",
   "license": "GPL-3.0+",
   "dependencies": {
-    "discord-routes": "^1.0.6",
-    "discord.js": "^11.3.2"
+    "discord-routes": "^1.0.7",
+    "discord.js": "^11.3.2",
+    "presence-timer": "^1.0.1"
   },
   "devDependencies": {
-    "nodemon": "^1.17.2"
+    "nodemon": "^1.17.3"
   },
   "nodemonConfig": {
     "ext": "js"

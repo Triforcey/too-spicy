@@ -1,6 +1,6 @@
 var discord = require('discord.js');
 var client = new discord.Client();
-var presence = require('./presence.js');
+var presence = require('presence-timer');
 var presenceTimer = new presence.Timer(client);
 var commands = require('./commands.js');
 
