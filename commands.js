@@ -17,9 +17,12 @@ exports.listen = function (client, name) {
 				req.reply('what\'s to de-spice?');
 				return;
 			}
-			msg.delete();
-			channel.send('<@' + msg.author.id + '> was de-spiced by <@' + req.author.id + '>!');
-		}, (err) => {
+			msg.delete().then(msg => {
+				channel.send('<@' + msg.author.id + '> was de-spiced by <@' + req.author.id + '>!');
+			}).catch(err => {
+				req.reply('I couldn\'t de-spice that message. It seems the ID was right, maybe I don\'t have the correct permissions.');
+			});
+		}).catch((err) => {
 			req.reply('I couldn\'t de-spice that message. Are you sure that ID is right?');
 		});
 	});
