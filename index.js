@@ -4,7 +4,7 @@ var presence = require('presence-timer');
 var presenceTimer = new presence.Timer(client);
 var commands = require('./commands.js');
 
-client.on('ready', function () {
+client.once('ready', function () {
 	presenceTimer.startTimer(300000, 600000);
 	commands.listen(client, '!toospicy');
 	console.log('Bot ready! Logged in as "' + client.user.tag + '".');
