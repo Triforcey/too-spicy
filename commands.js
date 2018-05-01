@@ -33,4 +33,12 @@ exports.listen = function (client, name) {
 		req.reply('I can only de-spice, and cannot de-trash.');
 	});
 	commands.listen();
+	client.on('message', msg => {
+		if (/@someone/i.test(msg.content)) {
+			var peeps = msg.guild.members.array();
+			if (peeps.length < 0) return;
+			var peep = peeps[Math.floor(Math.random() * peeps.length)];
+			msg.channel.send('<@' + peep.id + '>');
+		}
+	});
 }
