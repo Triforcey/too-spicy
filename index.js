@@ -11,3 +11,5 @@ client.once('ready', function () {
 });
 
 client.login(process.env.DISCORD_TOKEN);
+
+client.on('error', console.error);
