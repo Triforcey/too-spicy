@@ -1,6 +1,6 @@
-var CommandSet = require('discord-routes').CommandSet;
+let CommandSet = require('discord-routes').CommandSet;
 exports.listen = function (client, name) {
-	var commands = new CommandSet(client, name);
+	let commands = new CommandSet(client, name);
 	commands.set('', req => {
 		req.channel.send('<@' + req.author.id + '>\n!toospicy de-spice <message-id>\nTo get a message ID, check out this:\nhttps://support.discordapp.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-');
 	});
@@ -9,10 +9,10 @@ exports.listen = function (client, name) {
 			req.reply('What message do you wish to de-spice?');
 			return;
 		}
-		var msgId = args[0];
-		var channel = req.channel;
+		let msgId = args[0];
+		let channel = req.channel;
 		channel.fetchMessage(msgId).then((msg) => {
-			var urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+			let urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
 			if (!msg.attachments.array().length && !msg.content.match(urlRegex)) {
 				req.reply('what\'s to de-spice?');
 				return;
@@ -35,9 +35,9 @@ exports.listen = function (client, name) {
 	commands.listen();
 	client.on('message', msg => {
 		if (/@someone/i.test(msg.content)) {
-			var peeps = msg.guild.members.array();
+			let peeps = msg.guild.members.array();
 			if (peeps.length < 0) return;
-			var peep = peeps[Math.floor(Math.random() * peeps.length)];
+			let peep = peeps[Math.floor(Math.random() * peeps.length)];
 			msg.channel.send('<@' + peep.id + '>');
 		}
 	});
