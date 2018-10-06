@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 let discord = require('discord.js');
 let client = new discord.Client();
 let presence = require('presence-timer');

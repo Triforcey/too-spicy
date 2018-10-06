@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "nodemon"
+    "dev": "nodemon"
   },
   "author": "Jay Dee Phlem",
   "license": "GPL-3.0+",
@@ -13,6 +13,7 @@
     "bufferutil": "^4.0.0",
     "discord-routes": "^1.0.7",
     "discord.js": "^11.3.2",
+    "dotenv": "^6.0.0",
     "presence-timer": "^1.0.1"
   },
   "devDependencies": {
