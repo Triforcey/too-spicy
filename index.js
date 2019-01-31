@@ -1,8 +1,8 @@
 require('dotenv').config();
 
-let discord = require('discord.js');
-let client = new discord.Client();
-let presence = require('presence-timer');
+const CommandoClient = require('discord.js-commando');
+let client = new CommandoClient();
+const presence = require('presence-timer');
 let presenceTimer = new presence.Timer(client);
 let commands = require('./commands.js');
 
@@ -13,5 +13,3 @@ client.once('ready', function () {
 });
 
 client.login(process.env.DISCORD_TOKEN);
-
-client.on('error', console.error);
