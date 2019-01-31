@@ -10,14 +10,14 @@
   "author": "Jay Dee Phlem",
   "license": "GPL-3.0+",
   "dependencies": {
-    "bufferutil": "^4.0.0",
-    "discord-routes": "^1.0.7",
-    "discord.js": "^11.3.2",
-    "dotenv": "^6.0.0",
+    "bufferutil": "^4.0.1",
+    "discord.js": "^11.4.2",
+    "discord.js-commando": "^0.10.0",
+    "dotenv": "^6.2.0",
     "presence-timer": "^1.0.1"
   },
   "devDependencies": {
-    "nodemon": "^1.17.3"
+    "nodemon": "^1.18.9"
   },
   "nodemonConfig": {
     "ext": "js"
