@@ -16,9 +16,7 @@
     "dotenv": "^6.0.0",
     "presence-timer": "^1.0.1"
   },
-  "devDependencies": {
-    "nodemon": "^1.18.9"
-  },
+  "devDependencies": {},
   "nodemonConfig": {
     "ext": "js"
   }
